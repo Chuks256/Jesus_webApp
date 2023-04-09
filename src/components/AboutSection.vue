@@ -17,7 +17,23 @@
         <img  src="../assets/interceeding.jpg" class="kingIntercessor"/>
         <h1 class="kingTextIntercessor">He Is Our Intercessor</h1>
     </div>
+    <!-- saviour of the whole world  -->
+    <br><br><br><br>
+    <div class="thirdCol">
+        <div class="gridImg">
+            <img src="../assets/crucified.jpg" class="crucifiedImg" />
+            <img src="../assets/modalbox.png" alt="modal" class="modalImg">
+            <img src="../assets/earth.jpg" alt="earth" class="earthImg">
+            <img src="../assets/world.jpg" alt="earth" class="world">
+        </div>
+        <h1 class="kingTextSaviour">He Is Our Intercessor</h1>
     </div>
+    </div>
+    <!-- come now and join section -->
+    <div class="joinSection">
+        <img src="../assets/ascending.png" class="ascending" />
+        <p class="joinTxt">Be Part Of This Journey By Giving Your Life To Him</p>
+        </div>
 </section>
 </template>
 
@@ -38,6 +54,7 @@ section{
     padding:1px;
     flex-direction: column;
 }
+
 h2{
 font-family: "Poppins-Black",sans-serif;
 -webkit-text-stroke:2px black;
@@ -81,21 +98,24 @@ object-fit:cover;
     flex-direction: row-reverse;
     gap:8em;
     padding-top:30px;
+    margin: auto;
 }
 
-.kingTextIntercessor{
+.kingTextIntercessor,{
     padding:10% 10px;
 }
 
 .intercessorCircle{
-    position: absolute;
-    bottom: 15%;
-    right:40%;
     transition: linear, 1000ms;
     animation-name: intercessorCircle;
     animation-duration: 5000ms;
     animation-iteration-count: infinite;
     animation-delay: 1ms;
+    object-fit: contain;
+    position: absolute;
+    left:610px;
+    bottom:45%;
+    object-fit: contain;
 }
 
 @keyframes intercessorCircle {
@@ -107,4 +127,38 @@ object-fit:cover;
     }
 }
 
+/* grid image styles  */
+.crucifiedImg,.earthImg,.modalImg,.world{
+    width:250px;
+height: 250px;
+object-fit:cover;
+border-radius: 20px;
+}
+
+.gridImg{
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(2,0fr);
+    column-gap: 5px;
+    row-gap: 10px;
+}
+.thirdCol{
+    display: flex;
+}
+.kingTextSaviour{
+      padding:10% 10px;
+}
+.ascending{
+    width:600px;
+height: 600px;
+}
+
+.joinSection{
+    margin:auto
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
 </style>
