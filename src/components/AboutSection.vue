@@ -154,7 +154,7 @@ height: 600px;
 }
 
 .joinSection{
-    margin:auto
+    margin:auto;
     padding: 50px;
     display: flex;
     justify-content: center;
