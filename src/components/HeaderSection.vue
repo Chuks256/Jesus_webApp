@@ -15,6 +15,15 @@
         <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
         <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">      
         <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
+        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">  
+        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">      
+        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
+        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">
+        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
+        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">      
+        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
+        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">
+        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
         <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
     </marquee>
    
@@ -22,6 +31,12 @@
 </template>
 
 <script>
+import FootSection from "../components/FootSection.vue"
+export default{
+    components:{
+        FootSection
+    }
+}
 </script>
 
 <style scoped>

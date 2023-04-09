@@ -32,9 +32,10 @@
     <!-- come now and join section -->
     <div class="joinSection">
         <img src="../assets/ascending.png" class="ascending" />
-        <p class="joinTxt">Be Part Of This Journey By Giving Your Life To Him</p>
+        <h1 class="joinTxt">Be Part Of This Journey By Giving Your Life To Him</h1>
         </div>
 </section>
+
 </template>
 
 <script>
@@ -149,16 +150,25 @@ border-radius: 20px;
       padding:10% 10px;
 }
 .ascending{
-    width:600px;
-height: 600px;
+    width:550px;
+height: 550px;
+transition: linear, 1000ms;
 }
+
+
 
 .joinSection{
     margin:auto;
-    padding: 50px;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-content: center;
+    align-items: center;
     flex-direction: column;
+}
+
+.joinTxt{
+    text-align:center;
+    width:330px;
 }
 </style>
