@@ -9,14 +9,9 @@
 
 
 <style scoped>
-.containerWrapper{  
-display: flex;
-align-content: center;
-justify-content: center;
-flex-direction: column;
-position: absolute;
-left: 0;
-top:0;
+*{
+    user-select: none;
+    user-zoom: none;
 }
 </style>
 

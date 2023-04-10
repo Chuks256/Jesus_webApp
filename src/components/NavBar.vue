@@ -1,66 +1,83 @@
+
 <template>
 <nav>
-    <b class="navBarLogo">Jesus.</b>
+    <h2 class="logo">Jesus</h2>
     <ul>
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Community">Community</a></li>
+        <li v-for="x in this.links">
+        <a v-bind:href="x.linksId">{{ x.linkObj }}</a>
+        </li>
     </ul>
 </nav>
 </template>
 
 <script>
 export default{
-
+    data(){
+        return{
+            links:[
+                {linksId:'#Community',linkObj:"Community"},
+                {linksId:'#About',linkObj:"About"},
+                {linksId:'#Teams',linkObj:"Teams"},
+            ]
+        }
+    }
 }
 </script>
 
 <style scoped>
-.navBarLogo{
-    font-size: 23px;
-    font-weight: bolder;
-}
-
 nav{
-    padding-top: 20px;
-    margin:0px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width:70vw;
-    align-content: center;
-}
-
-ul,li {
-    gap:7em;
-    margin: 0 auto;
+    padding: 2px 20%;
     display: flex;
     justify-content: space-between;
-    list-style-type: none;
+    margin:auto;
+    align-content: center;
     position: relative;
 }
 
-li,a{
+.logo{
+    font-size:1.3rem;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    gap:7em;
+    align-content: center;
+}
+a,li{
     color:black;
+    list-style-type: none;
     text-decoration: none;
 }
 
+/* navigation pointers */
 li::before{
-content: "";
-position:absolute;
-width:0%;
-border: 2px solid black;
-bottom:-4px;
-opacity:0%;
+    content: "";
+    position: absolute;
+    border:2px solid;
+    width:0%;
+    bottom: 23%;
+    display: none;
 }
 
 li:hover::after{
-content: "";
-position:absolute;
-width:100%;
-border: 2px solid black;
-bottom:-4px;
-opacity:100%;
+    content: "";
+    position: absolute;
+    border:2px solid;
+    width:5%;
+    bottom: 23%;
+    display: block;
+    transition: linear ,1000ms;
 }
 
+/* responsiveness */
+@media screen and (max-width:480px){
+    ul{
+        display: none;
+    }
+    nav{
+        padding: 6px 6%;
+    }
+}
 </style>

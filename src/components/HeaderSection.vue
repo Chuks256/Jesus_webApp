@@ -1,67 +1,68 @@
 <template>
-<section class="heroSection">
-    <img src="../assets/jessustature.png" alt="JesusStature"  class="HeroImg">
+    <section class="heroSection">
+        <img src="../assets/jessustature.png" alt="jesusStatus" class="JesusStature">
+        <!-- marquee section -->
+        <marquee>
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+            <img src="../assets/marquee.png" alt="marquee" class="Marquee">
+        </marquee>
     </section>
-    <div class="dcon">
-        <marquee class="d" behavior="infinite" direction="forward">
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">      
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">      
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">      
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">  
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">      
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">      
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-        <img src="../assets/marquee.png" alt="Marque"  class="HeroMarquee">        
-    </marquee>
-   
-    </div>
 </template>
 
 <script>
-import FootSection from "../components/FootSection.vue"
-export default{
-    components:{
-        FootSection
-    }
-}
 </script>
 
 <style scoped>
+/* hero container style */
 .heroSection{
-    display: flex;
     margin: auto;
-    margin-top: -20px;
-}
-
-.HeroImg{
-    
-}
-
-.dcon{
-    display: flex;
-    flex-direction: row;
-}
-.HeroMarquee{
-}
-
-.heroSection{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    display:flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: -90px;
+}
+
+/* hero assets style  */
+.JesusStature{
+margin: auto;
+max-width:70%;
+}
+
+marquee{
+    width: 100%;
+    z-index:1000;
+    left:0;
+    position:absolute;
+    top:750px;
+}
+
+/* reponsiveness  */
+@media screen and (max-width:480px) {
+.heroSection{
+    margin-top:-5px;
+}
+.JesusStature{
+margin: auto;
+max-width:100%;
+} 
+
+marquee{
+    top:400px;
+}
 }
 
 </style>

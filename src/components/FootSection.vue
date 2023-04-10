@@ -1,27 +1,35 @@
 <template>
-<section class="footerSection">
-    <div class="footerContainer">
-        <h2 class="footerLogo"><b>Jesus</b></h2>
-    </div>
+    <section class="footerSection">
+        <div class="footerdetails">
+            <h2 class="footerLogo">Jesus</h2>
+        </div>
     
-</section>
+    </section>
+
 </template>
 
 <script>
 </script>
 
-<style scoped>
+<style>
 .footerSection{
+    position: absolute;
     width:100%;
-    height:40vh;
+    height: 40vh;
     background-color: black;
+    z-index: 1000;
+    left: 0;
     display: flex;
-    justify-content: center;
 }
 
-.footerLogo{
-    margin:60px;
+.footerdetails{
+    padding: 30px 12%;
     color:white;
-    width:60rem;
+}
+
+@media screen and (max-width:480px) {
+    .footerLogo{
+        font-size:20px;
+    }
 }
 </style>
