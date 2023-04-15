@@ -37,10 +37,51 @@
    
 </template>
 
+<!-- javascript section -->
 <script>
+export default{
+    mounted(){
+        let el=new IntersectionObserver((entry)=>{
+            entry.forEach((entries)=>{
+                if(entries.isIntersecting){
+                    let h=entries.target.scrollHeight
+                 if(h==494){
+                    console.log('jesus')
+                 }
+                }
+           
+            }, {
+                delay: 2,
+                rootMargin:"0px 100px 0px 100px"
+            })
+        });
+        // check if viewer is seeing element
+        let b=document.querySelector('.ascendImg');
+        el.observe(b)
+    }
+       
+    }
 </script>
 
+<!-- css section -->
 <style scoped> 
+/* animation class */
+.fade{
+opacity:0%;
+}
+
+.appear{
+opacity: 100%;
+}
+
+
+
+/* dom style  */
+
+*{
+    transition:linear,1000ms;
+}
+
 @font-face {
     font-family: 'Poppins-Black';
     src: url("../assets/fontFamilyPath/Poppins-Black.ttf");
@@ -123,8 +164,9 @@ gap:10em
         text-align: center;
     }
     .ascendImg{
+        transition: linear,1000ms;
         max-width:500px;
-        /* position: absolute; */
+        /* opacity: 0%; */
     }
 
     .ascendingText{
